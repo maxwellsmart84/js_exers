@@ -41,9 +41,9 @@ function sum(){
     // .. do something with each element of args
     // YOUR CODE HERE
     total=0;
-    args.forEach(element, index, array) {
+    args.forEach (function(element, index, array) {
     total += element;
-  };
+  });
     return total;
 
 };
@@ -58,12 +58,11 @@ function average(){
 
     // .. do something with each element of args
     // YOUR CODE HERE
-    args.forEach(element, index, array) {
+    args.forEach(function(element, index, array) {
       var total = 0;
       total += element;
       var avg = total/array.length;
-      bre
-    }
+    });
     return avg;
 };
 
@@ -77,10 +76,10 @@ function largest(){
     var bigger = args[0]
     // .. do something with each element of args
     // YOUR CODE HERE
-    args.forEach (element, index, array) {
+    args.forEach (function(element, index, array) {
       if (el > bigger) {
         bigger = el;
-      }
+      });
       return bigger;
     };
 };
@@ -95,10 +94,10 @@ function longest(){
     var length = 0
     // .. do something with each element of args
     // YOUR CODE HERE
-    args.forEach(element, index, array) {
+    args.forEach (function(element, index, array) {
       if (element.length > length) {
         length = el;
-      }
+      });
       return length;
     };
 };
@@ -139,8 +138,8 @@ console.assert === "mario, lugi, toad, yoshi, peach"
 
 // .pop()
 var nintendo = ["mario", "luigi", "toad", "yoshi", "peach"]
-var ninpop = nintendo.pop(3);
-console.assert === ["mario", "luigi", "toad", "peach"]
+var ninpop = nintendo.pop();
+console.assert === ["mario", "luigi", "yoshi" "toad"]
 
 // .push()
 

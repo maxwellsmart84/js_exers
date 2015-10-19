@@ -147,14 +147,14 @@ var spanishColor = function(colorName) {
 // Put your answer below -------------------------
 
 var spanishColor = function(colorName) {
-  colorName = {
+  var color = {
     rojo: "#ff0000",
     blanco: "#ffffff",
     azul: "#0000ff",
     verde: "#00ff00",
     negro: "#000000",
   };
-  return;
+  return color[colorName];
 };
 
 // -----------------------------------------------
@@ -172,7 +172,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo = "";
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -195,9 +196,17 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
+var callback = function() {
+  console.log("hello");
+};
 
+var callNTimes = function(callback, numtimes ) {
+  for (var i= 0; i < numtimes; i++) {
+    callback();
+  }
+};
 
-
+callNTimes(calback,13);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -212,17 +221,17 @@ var callTenTimes = function(callback) {
 // code to protect from this.
 
 // HINT: "global scope"
+var game = function {
+  var score = 0;
 
-var score = 0;
-
-var increaseScore = function() {
+  var increaseScore = function() {
   score++;
-};
+  };
 
-var decreaseScore = function() {
+  var decreaseScore = function() {
   score--;
+  };
 };
-
 // Put your answer below -------------------------
 
 
@@ -244,7 +253,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+function addNumbers(numberA, numberB) {
+    return (numberA + numberB);
+};
 
+var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -270,8 +283,19 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+var accelerate = function(ammout) {
+  if (ammount = NaN) {
+    return "That is not a number";
+  };
+  else if (ammount= undefined) {
+    return "Please enter a number";
+  };
+  speed += amount;
+};
 
-
+//If you dont enter a number then it will not be able to evaluate it.  By including NaN
+// and if statements you can return text to the user telling them to make sure they entered
+// a number and not a string.
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
